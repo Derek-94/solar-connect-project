@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Header, Icon, Divider } from 'semantic-ui-react';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header as="h2" textAlign="center">
+        <Icon name="clock" />
+        2021년 8월 17일
+      </Header>
+      <Divider />
+      <Header as="h2" textAlign="center">
+        이부분에 제가 구현하는 친구가 들어갑니다.
+      </Header>
+      <Divider />
+      <Header as="h2" textAlign="center">
+        <Icon name="clock" />
+        Tuesday July 20, 2021
+      </Header>
     </div>
   );
-}
+};
 
 export default App;
