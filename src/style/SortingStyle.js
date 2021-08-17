@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Label } from 'semantic-ui-react';
 
 export const SortingWrapper = styled.section`
   display: flex;
@@ -14,4 +14,8 @@ export const ResultSpan = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+`;
+
+export const ErrorLabel = styled(Label)`
+  text-align: center;
 `;

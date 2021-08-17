@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import onSort from '../../utils/onSort';
-import { Input, Button, Icon, Divider, Segment, Label, Loader, Header } from 'semantic-ui-react';
-import { SortingStartIcon, SortingWrapper, ResultSpan } from '../../style/Sorting';
+import { Input, Button, Icon, Divider, Segment, Loader, Header } from 'semantic-ui-react';
+import { SortingStartIcon, SortingWrapper, ResultSpan, ErrorLabel } from '../../style/SortingStyle';
 
 const Sorting = () => {
   const [userInputStr, setUserInputStr] = useState([]);
@@ -10,12 +10,12 @@ const Sorting = () => {
   const [sortedDownArray, setSortedDownArray] = useState([]);
   const [inputValidationError, setInputValidationError] = useState(false);
 
-  const onChange = e => {
+  const onHandleChangeInput = e => {
     setUserInputStr(e.target.value);
     setInputValidationError(e.target.value.match(/[^0-9|,]/g) !== null);
   };
 
-  const onClick = e => {
+  const onClickSortStart = e => {
     let finalNumbersArray = [];
     const userInputStrToArray = userInputStr.split(',');
     for (let i = 0; i < userInputStrToArray.length; i++) {
@@ -38,19 +38,19 @@ const Sorting = () => {
 
   return (
     <SortingWrapper>
-      <Input icon="paper plane" placeholder="Input numbers..." onChange={onChange} />
+      <Input icon="paper plane" placeholder="Input numbers..." onChange={onHandleChangeInput} />
       {inputValidationError && (
-        <Label basic color="red" pointing>
+        <ErrorLabel basic color="red" pointing>
           숫자만 입력 가능합니다. 🤔
-        </Label>
+        </ErrorLabel>
       )}
       <Divider />
       {inputValidationError ? (
-        <Button disabled icon onClick={onClick}>
-          <Icon name="play" />
+        <Button disabled icon onClick={onClickSortStart}>
+          <SortingStartIcon name="play" /> Start!
         </Button>
       ) : (
-        <Button icon onClick={onClick}>
+        <Button icon onClick={onClickSortStart}>
           <SortingStartIcon name="play" />
           Start!
         </Button>
