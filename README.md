@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# ☀️ Solar-Connect Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 배포주소
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+## 기능 구현 화면
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![solar](https://user-images.githubusercontent.com/52649378/129754934-a7adb043-2a27-47f4-8182-1b33547ee6eb.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br />
 
-### `yarn test`
+## 사용 기술 스택 📚
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React, React Hooks
 
-### `yarn build`
+- Styled component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Semantic UI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 멤버별 기능 구현
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🙋‍♀️ 김효진
+  
+  - Timer 컴포넌트 작성, 재활용.
 
-### `yarn eject`
+  - NATION 객체의 속성을 전달하여 컴포넌트 별 “ko-KR” , “en-US” 표기법 구분
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - new Date 객체를 활용하여 Timer 속성 구현
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - month, date, Component 조건부 랜더링
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - 배포
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- 🙋‍♂️ 홍석기
 
-## Learn More
+  - Sorting component 구현
+  
+    - 사용자가 입력한 값은 숫자나 쉼표만 가능.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - 그 외 입력시, 에러표기.
+    
+    - 소팅 시작 버튼 누르면 오름차순은 바로 나오고, 내림차순은 3초 후에 렌더링.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Sort algorithm
 
-### Code Splitting
+    - `Merge Sort` 사용. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    - [참조 블로그](https://jun-choi-4928.medium.com/javascript%EB%A1%9C-merge-sort-%EB%B3%91%ED%95%A9%EC%A0%95%EB%A0%AC-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-c13c3eee6570)
+    
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
