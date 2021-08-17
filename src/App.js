@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Divider } from 'semantic-ui-react';
+import styled from 'styled-components';
 import Timer from './components/Timer/Timer';
 
 const NATION = {
@@ -9,7 +10,7 @@ const NATION = {
 
 const App = () => {
   return (
-    <div className="App">
+    <Wrapper className="App">
       <Timer nation={NATION.KST} />
       <Divider />
       <Header as="h2" textAlign="center">
@@ -17,8 +18,15 @@ const App = () => {
       </Header>
       <Divider />
       <Timer nation={NATION.UTC} />
-    </div>
+    </Wrapper>
   );
 };
 
 export default App;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+`;

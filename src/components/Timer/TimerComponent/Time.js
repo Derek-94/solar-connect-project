@@ -20,5 +20,5 @@ function Time({ present }) {
 export default Time;
 
 const Now = styled.div`
-  color: tomato;
+  color: #ffb300;
 `;

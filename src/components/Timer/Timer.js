@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Header, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
-import Time from './Time/Time';
+import KrDate from './TimerComponent/KrDate';
+import EnDate from './TimerComponent/EnDate';
+import Time from './TimerComponent/Time';
 
 function Timer({ nation }) {
   const [present, setPresent] = useState(new Date());
@@ -57,19 +59,16 @@ function Timer({ nation }) {
         <DateBox>
           <Icon name="clock" />
           {nation === 'ko-KR' ? (
-            <>
-              <Today>{year}년</Today>
-              <Today>{_month}월</Today>
-              <Today>{_date}일</Today>
-              <Today>{getDayKr(day)}요일</Today>
-            </>
+            <KrDate year={year} month={_month} date={_date} day={day} getDayKr={getDayKr} />
           ) : (
-            <>
-              <Today>{getDayEn(day)}</Today>
-              <Today>{getMonthEn(month)}</Today>
-              <Today>{_date},</Today>
-              <Today>{year}</Today>
-            </>
+            <EnDate
+              year={year}
+              month={month}
+              date={_date}
+              day={day}
+              getDayEn={getDayEn}
+              getMonthEn={getMonthEn}
+            />
           )}
           <Time present={present} />
         </DateBox>
@@ -81,13 +80,11 @@ function Timer({ nation }) {
 export default Timer;
 
 const TimerBox = styled.div`
-  display: flex;
+  padding: 20px;
+  background-color: #e2f6ff;
 `;
 
 const DateBox = styled.div`
   display: flex;
-`;
-
-const Today = styled.div`
-  margin-right: 10px;
+  color: #00004f;
 `;
