@@ -1,7 +1,9 @@
 import React from 'react';
-import { Header, Divider } from 'semantic-ui-react';
-import styled from 'styled-components';
 import Timer from './components/Timer/Timer';
+import Sorting from './components/Sorting/Sorting';
+
+import { Divider } from 'semantic-ui-react';
+import { SortingSegment, Wrapper } from './style/AppStyle';
 
 const NATION = {
   KST: 'ko-KR',
@@ -13,9 +15,9 @@ const App = () => {
     <Wrapper className="App">
       <Timer nation={NATION.KST} />
       <Divider />
-      <Header as="h2" textAlign="center">
-        이부분에 제가 구현하는 친구가 들어갑니다.
-      </Header>
+      <SortingSegment color="teal">
+        <Sorting />
+      </SortingSegment>
       <Divider />
       <Timer nation={NATION.UTC} />
     </Wrapper>
@@ -23,10 +25,3 @@ const App = () => {
 };
 
 export default App;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-`;
