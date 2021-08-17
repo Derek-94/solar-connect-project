@@ -13,8 +13,8 @@ function Timer({ nation }) {
   const date = present.getDate();
   const day = present.getDay();
 
-  const _month = `${month < 10 ? `0${month}` : month}`;
-  const _date = `${date < 10 ? `0${date}` : date}`;
+  const modifiedMonth = `${month < 10 ? `0${month}` : month}`;
+  const modifiedDate = `${date < 10 ? `0${date}` : date}`;
 
   const getDayKr = index => {
     const days = ['일', '월', '화', '수', '목', '금', '토'];
@@ -59,12 +59,18 @@ function Timer({ nation }) {
         <DateBox>
           <Icon name="clock" />
           {nation === 'ko-KR' ? (
-            <KrDate year={year} month={_month} date={_date} day={day} getDayKr={getDayKr} />
+            <KrDate
+              year={year}
+              month={modifiedMonth}
+              date={modifiedDate}
+              day={day}
+              getDayKr={getDayKr}
+            />
           ) : (
             <EnDate
               year={year}
               month={month}
-              date={_date}
+              date={modifiedDate}
               day={day}
               getDayEn={getDayEn}
               getMonthEn={getMonthEn}
