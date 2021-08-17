@@ -1,5 +1,7 @@
 import React from 'react';
-import { Header, Icon, Divider } from 'semantic-ui-react';
+import { Header, Icon, Divider, Segment } from 'semantic-ui-react';
+
+import Sorting from './pages/Sorting';
 
 const App = () => {
   return (
@@ -9,9 +11,9 @@ const App = () => {
         2021년 8월 17일
       </Header>
       <Divider />
-      <Header as="h2" textAlign="center">
-        이부분에 제가 구현하는 친구가 들어갑니다.
-      </Header>
+      <Segment color="teal">
+        <Sorting />
+      </Segment>
       <Divider />
       <Header as="h2" textAlign="center">
         <Icon name="clock" />
