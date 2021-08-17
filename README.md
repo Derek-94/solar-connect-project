@@ -22,7 +22,7 @@
 
 - 🙋‍♀️ 김효진
   
-  - Timer 컴포넌트 작성, 재활용.
+  - Timer component 재활용.
 
   - NATION 객체의 속성을 전달하여 컴포넌트 별 “ko-KR” , “en-US” 표기법 구분
 
@@ -30,7 +30,9 @@
 
   - month, date, Component 조건부 랜더링
 
-  - 배포
+  - Time component 재활용.
+    
+    - [참조 블로그](http://b1ix.net/7)
 
 - 🙋‍♂️ 홍석기
 

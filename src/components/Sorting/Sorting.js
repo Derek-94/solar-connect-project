@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import onSort from '../../utils/onSort';
-import { Input, Button, Icon, Divider, Segment, Loader, Header } from 'semantic-ui-react';
+import { Input, Button, Divider, Segment, Loader, Header } from 'semantic-ui-react';
 import { SortingStartIcon, SortingWrapper, ResultSpan, ErrorLabel } from '../../style/SortingStyle';
 
 const Sorting = () => {

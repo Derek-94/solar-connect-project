@@ -88,6 +88,7 @@ export default Timer;
 const TimerBox = styled.div`
   padding: 20px;
   background-color: #e2f6ff;
+  width: 500px;
 `;
 
 const DateBox = styled.div`
